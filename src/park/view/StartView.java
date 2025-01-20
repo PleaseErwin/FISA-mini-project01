@@ -2,7 +2,7 @@ package park.view;
 
 import java.util.Scanner;
 
-import controller.Controller;
+import controller.parkController;
 
 public class StartView {
 
@@ -26,14 +26,14 @@ public class StartView {
 			
 			switch(menuInput) {
 			case "1":
-				Controller.getparkInfo();
+				parkController.getparkInfo();
 				break;
 			
 			case "2":
 				String searchParkName = "";
 				System.out.print("공원 검색어 입력 > ");
 				searchParkName = scanner.nextLine();
-				Controller.getparkInfo(searchParkName);
+				parkController.getparkInfo(searchParkName);
 				break;
 			
 			case "3":
@@ -43,7 +43,7 @@ public class StartView {
 				updateInfo = scanner.nextLine();
 				//updateList = updateInfo.split(" ");
 				
-				Controller.addPark(updateInfo); 
+				parkController.addPark(updateInfo); 
 				break;
 				
 			case "4":
@@ -52,14 +52,14 @@ public class StartView {
 				System.out.println("정보를 수정할 주요식물/지역 순서대로 입력 (엔터로 구분) > ");
 				updatePrincipalSpecies = scanner.nextLine();
 				updateLocation = scanner.nextLine();
-				Controller.updatePark(updatePrincipalSpecies, updateLocation);
+				parkController.updatePark(updatePrincipalSpecies, updateLocation);
 				break;
 			
 			case "5":
 				String deleteParkName = "";
 				System.out.print("삭제할 공원 이름 입력 > ");
 				deleteParkName = scanner.nextLine();
-				Controller.deletePark(deleteParkName);
+				parkController.deletePark(deleteParkName);
 				break;
 			
 			case "6":
