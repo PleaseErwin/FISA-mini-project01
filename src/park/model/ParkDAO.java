@@ -12,7 +12,7 @@ import park.model.util.DBUtil;
 public class ParkDAO {
 
 	// location으로 주요식물 수정하기
-	public static boolean updateParkinfo(String principalSpecies, String location) throws SQLException {
+	public static boolean updateParkInfo(String principalSpecies, String location) throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
@@ -62,7 +62,7 @@ public class ParkDAO {
 	}
 
 	// 검색어로 공원 정보 검색
-	public static ArrayList<ParkDTO> getparkInfo(String keyword) throws SQLException {
+	public static ArrayList<ParkDTO> getParkInfo(String keyword) throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
@@ -90,7 +90,7 @@ public class ParkDAO {
 	}
 
 	// 모든 공원 정보 검색
-	public static ArrayList<ParkDTO> getAllparkInfo() throws SQLException {
+	public static ArrayList<ParkDTO> getAllParkInfo() throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
@@ -108,7 +108,6 @@ public class ParkDAO {
 						.principalSpecies(rset.getString(4)).directions(rset.getString(5)).location(rset.getString(6))
 						.officeNumber(rset.getString(7)).keyFacilities(rset.getString(8)).build();
 				list.add(park);
-				System.out.println(park);
 			}
 			
 		} finally {

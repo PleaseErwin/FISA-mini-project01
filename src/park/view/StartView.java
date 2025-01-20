@@ -26,23 +26,21 @@ public class StartView {
 			
 			switch(menuInput) {
 			case "1":
-				parkController.getparkInfo();
+				parkController.getParkInfo();
 				break;
 			
 			case "2":
 				String searchParkName = "";
 				System.out.print("공원 검색어 입력 > ");
 				searchParkName = scanner.nextLine();
-				parkController.getparkInfo(searchParkName);
+				parkController.getParkInfo(searchParkName);
 				break;
 			
 			case "3":
 				String updateInfo;
 				
 				System.out.print("추가할 공원 정보를 연번/공원명/개원일/주요식물/오시는길/지역/전화번호/주요시설 순서대로 입력 (엔터로 구분) > ");
-				updateInfo = scanner.nextLine();
-				//updateList = updateInfo.split(" ");
-				
+				updateInfo = scanner.nextLine();				
 				parkController.addPark(updateInfo); 
 				break;
 				
