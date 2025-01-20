@@ -37,25 +37,13 @@ public class StartView {
 				break;
 			
 			case "3":
-				int addNum;
-				String addParkName;
-				String addOpeningDate;
-				String addPrincipalSpecies;
-				String addDirections;
-				String addLocation;
-				String addOfficeNumber;
-				String addKeyFacilities;
-				System.out.print("추가할 공원 정보를 연번/공원명/개원일/주요식물/오시는길/지역/전화번호/주요시설 순서대로 입력 (엔터로 구분) > ");
+				String updateInfo;
 				
-				addNum = Integer.parseInt(scanner.nextLine());
-				addParkName = scanner.nextLine();
-				addOpeningDate = scanner.nextLine();
-				addPrincipalSpecies = scanner.nextLine();
-				addDirections = scanner.nextLine();
-				addLocation = scanner.nextLine();
-				addOfficeNumber = scanner.nextLine();
-				addKeyFacilities = scanner.nextLine();
-				Controller.addPark(addNum, addParkName, addOpeningDate, addPrincipalSpecies, addDirections, addLocation, addOfficeNumber, addKeyFacilities); 
+				System.out.print("추가할 공원 정보를 연번/공원명/개원일/주요식물/오시는길/지역/전화번호/주요시설 순서대로 입력 (엔터로 구분) > ");
+				updateInfo = scanner.nextLine();
+				//updateList = updateInfo.split(" ");
+				
+				Controller.addPark(updateInfo); 
 				break;
 				
 			case "4":

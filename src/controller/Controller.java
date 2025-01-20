@@ -28,12 +28,11 @@ public class Controller {
 	}
 
 	// 새로운 공원 정보 저장
-	public static boolean addPark(int num, String parkName, String openingDate, String principalSpecies,
-			String directions, String location, String officeNumber, String keyFacilities) {
+	public static boolean addPark(String updateInfo) {
 		boolean result = false;
 
 		try {
-			result = ParkDAO.addParkInfo(num, parkName, openingDate, principalSpecies, directions, location, officeNumber, keyFacilities);
+			result = ParkDAO.addParkInfo(updateInfo);
 			System.out.println("추가 완료");
 		} catch (SQLException s) {
 			s.printStackTrace();
